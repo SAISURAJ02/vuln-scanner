@@ -10,8 +10,7 @@ misconfigurations and displays results on a live dashboard with a computed risk 
 - **Cookies** — missing `Secure` / `HttpOnly` flags
 - **Info disclosure** — server version leakage in headers
 - **Outdated JS libraries** — jQuery / Angular / Bootstrap version fingerprinting
-- **Open ports** — localhost/private targets only (see "Scope & Ethics" below)
-
+- **Open ports** — localhost/private targets only
 ## Architecture
 
 ```
@@ -50,9 +49,8 @@ npm run dev
 ```
 Runs on `http://localhost:5173`.
 
-Open the frontend URL, enter a target (e.g. `example.com` or `localhost:8000`), and click Scan.
 
-## Scope & Ethics (worth mentioning in the interview)
+## Scope & Ethics
 
 Port scanning is **only performed against localhost/private IP targets**.
 For public URLs, only passive checks are run — the same requests any normal
@@ -62,7 +60,7 @@ without authorization can be illegal in many jurisdictions; this tool is
 designed to avoid that by scope-checking the target before deciding which
 checks to run.
 
-## Possible extensions (if asked "what would you add next")
+## Possible extensions
 
 - Auth (JWT) so scans are tied to a user account
 - Scheduled/recurring scans with diff-based alerting
