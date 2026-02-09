@@ -50,19 +50,3 @@ npm run dev
 Runs on `http://localhost:5173`.
 
 
-## Scope & Ethics
-
-Port scanning is **only performed against localhost/private IP targets**.
-For public URLs, only passive checks are run — the same requests any normal
-browser visit would trigger (fetching headers, checking the TLS handshake,
-reading response HTML). Actively port-scanning third-party infrastructure
-without authorization can be illegal in many jurisdictions; this tool is
-designed to avoid that by scope-checking the target before deciding which
-checks to run.
-
-## Possible extensions
-
-- Auth (JWT) so scans are tied to a user account
-- Scheduled/recurring scans with diff-based alerting
-- Export findings as PDF/CSV report
-- Plug in a real CVE feed (e.g. NVD API) instead of the small hardcoded library list
