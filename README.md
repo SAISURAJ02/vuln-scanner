@@ -10,7 +10,7 @@ misconfigurations and displays results on a live dashboard with a computed risk 
 - **Cookies** — missing `Secure` / `HttpOnly` flags
 - **Info disclosure** — server version leakage in headers
 - **Outdated JS libraries** — jQuery / Angular / Bootstrap version fingerprinting
-- **Open ports** — localhost/private targets only
+- **Open ports** — localhost/private targets
 ## Architecture
 
 ```
@@ -41,7 +41,7 @@ python app.py
 ```
 Runs on `http://localhost:5000`.
 
-### Frontend
+### Frontend    
 ```bash
 cd frontend
 npm install
